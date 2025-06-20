@@ -12,7 +12,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-image: url('SIPENA TEMPLATE.jpg');
+      background-image: url('SIPENA_TEMPLATE.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top center;
@@ -57,10 +57,32 @@
       background-color: #1ebe5b;
     }
 
+    .spreadsheet-section {
+      margin-top: 40px;
+      width: 95%;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
     @media (max-width: 480px) {
       .form-container {
         margin-top: 280px;
         padding: 20px;
+      }
+
+      .spreadsheet-section {
+        padding: 16px;
       }
     }
   </style>
@@ -82,6 +104,18 @@
     </form>
   </div>
 
+ <div style="text-align: center; margin-top: 30px;">
+  <a href="https://docs.google.com/spreadsheets/d/1a5XciVen7dYfODKZN9URVacguXR41h3Ijbd1tGTZ-vY/edit?usp=sharing" 
+     target="_blank" 
+     style="text-decoration: none; color: black; font-family: Arial, sans-serif; font-weight: bold; font-size: 20pt;">
+    📋 Lihat atau Perbarui Stok
+  </a>
+</div>
+
+
+
+
+
   <script>
     document.getElementById("atkForm").addEventListener("submit", function(e){
       e.preventDefault();
@@ -90,7 +124,7 @@
       const divisi = document.getElementById("divisi").value;
       const atk = document.getElementById("atk").value;
 
-      const noWA = "6281234567890"; // Ganti dengan nomor WhatsApp tujuan
+      const noWA = "6281290988061"; // Ganti dengan nomor WhatsApp tujuan
 
       const pesan = `Halo Admin, saya ingin mengajukan permintaan ATK:\n\nNama: ${nama}\nDivisi: ${divisi}\nPermintaan ATK:\n${atk}`;
       const url = `https://wa.me/${noWA}?text=${encodeURIComponent(pesan)}`;
